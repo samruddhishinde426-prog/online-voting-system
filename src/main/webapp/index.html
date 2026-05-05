@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Voting System</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #0b2c5d;
+            padding: 15px 40px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar h2 {
+            margin: 0;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Section */
+        .main {
+            height: 85vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom, #2196f3, #2dd4bf);
+            text-align: center;
+            color: white;
+        }
+
+        .content h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .content p {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .content button {
+            padding: 12px 30px;
+            font-size: 16px;
+            border: none;
+            background-color: white;
+            color: #2196f3;
+            cursor: pointer;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .content button:hover {
+            background-color: #e6e6e6;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #0b2c5d;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <h2>Online Voting</h2>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="voter_login.html">Voter Login</a>
+        <a href="voter_register.html">Register</a>
+        <a href="admin.html">Admin</a>
+    </div>
+</div>
+
+<!-- Main Landing Page -->
+<div class="main">
+    <div class="content">
+        <h1>Secure Online Voting System</h1>
+        <p>Your vote matters. Vote safely and securely.</p>
+
+        <!-- Vote Now goes to LOGIN (not vote page) -->
+        <button onclick="location.href='voter_login.html'">
+            Vote Now
+        </button>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    © 2026 Online Voting System
+</div>
+
+</body>
+</html>

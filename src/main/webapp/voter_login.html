@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voter Login</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #f2f2f2;
+        }
+
+        /* Top Navbar */
+        .navbar {
+            background-color: #0b2c5d;
+            padding: 15px 40px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar h2 {
+            margin: 0;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Login Box */
+        .box {
+            width: 400px;
+            margin: 100px auto;
+            background: white;
+            padding: 25px;
+            box-shadow: 0 0 10px gray;
+            text-align: center;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 10px 25px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <h2>Online Voting</h2>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="voter_register.html">Register</a>
+    </div>
+</div>
+
+<!-- Login Box -->
+<div class="box">
+    <h2>Voter Login</h2>
+
+    <form action="voterLogin" method="post" autocomplete="off">
+
+        <!-- Fake autofill blockers -->
+        <input type="text" style="display:none">
+        <input type="password" style="display:none">
+
+        <input type="text"
+               name="voterId"
+               placeholder="Voter ID"
+               autocomplete="off"
+               readonly
+               onfocus="this.removeAttribute('readonly');"
+               required>
+
+        <input type="password"
+               name="password"
+               placeholder="Password"
+               autocomplete="new-password"
+               readonly
+               onfocus="this.removeAttribute('readonly');"
+               required>
+
+        <br><br>
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+</body>
+</html>

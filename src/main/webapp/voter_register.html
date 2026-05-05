@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voter Registration</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #f2f2f2;
+        }
+
+        /* Top Navbar */
+        .navbar {
+            background-color: #0b2c5d;
+            padding: 15px 40px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar h2 {
+            margin: 0;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Registration Box */
+        .box {
+            width: 400px;
+            margin: 100px auto;
+            background: white;
+            padding: 25px;
+            box-shadow: 0 0 10px gray;
+            text-align: center;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 10px 25px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <h2>Online Voting</h2>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="voter_login.html">Login</a>
+    </div>
+</div>
+
+<!-- Registration Box -->
+<div class="box">
+    <h2>Voter Registration</h2>
+
+    <!-- 🔒 Autofill fully disabled -->
+    <form action="voterRegister"
+          method="post"
+          autocomplete="off"
+          onsubmit="return true;">
+
+        <!-- Fake fields to confuse browser autofill -->
+        <input type="text" style="display:none">
+        <input type="password" style="display:none">
+
+        <input type="text"
+               name="voterId"
+               placeholder="Voter ID"
+               autocomplete="off"
+               readonly
+               onfocus="this.removeAttribute('readonly');"
+               required>
+
+        <input type="text"
+               name="fullName"
+               placeholder="Full Name"
+               autocomplete="off"
+               readonly
+               onfocus="this.removeAttribute('readonly');"
+               required>
+
+        <input type="date"
+               name="dob"
+               autocomplete="off"
+               readonly
+               onfocus="this.removeAttribute('readonly');"
+               required>
+
+        <input type="text"
+               name="phone"
+               placeholder="Phone Number"
+               autocomplete="off"
+               readonly
+               onfocus="this.removeAttribute('readonly');"
+               pattern="[0-9]{10}"
+               required>
+
+        <input type="password"
+               name="password"
+               placeholder="Password"
+               autocomplete="new-password"
+               readonly
+               onfocus="this.removeAttribute('readonly');"
+               required>
+
+        <br><br>
+        <button type="submit">Register</button>
+    </form>
+
+    <br>
+    <a href="voter_login.html">Already registered? Login</a>
+</div>
+
+</body>
+</html>
